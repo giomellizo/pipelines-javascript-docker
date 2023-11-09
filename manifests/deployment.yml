@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: giomellizopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: giomellizopipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: giomellizopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: giomellizopipelinesjavascriptdocker 
+          image: gmacontainerregistry.azurecr.io/giomellizopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
